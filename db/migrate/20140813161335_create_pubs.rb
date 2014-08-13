@@ -3,8 +3,8 @@ class CreatePubs < ActiveRecord::Migration
     create_table :pubs do |t|
     t.string :name
     t.string :address
-    t.lattitude :string
-    t.longitude :string
+    t.string :latitude
+    t.string :longitude
 
       t.timestamps
     end
