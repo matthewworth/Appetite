@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'pubs/index'
+  resources "pubs"
 
    root "pubs#index"
 

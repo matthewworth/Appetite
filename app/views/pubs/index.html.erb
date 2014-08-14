@@ -1,11 +1,15 @@
-<% @pubs.each do |pub| %>	
-<div class="pub">
 
-	<p><%= pub.name %></p>
-	<p><%= pub.address %></p>
+<%= simple_form_for :search do |f| %>
+	<%= f.input :q, label: false %>
+<% end	 %>
+<ul>
+	<% @pubs.each do |pub| %>	
+		<li data-lat='<%= pub.latitude %>' data-lng='<%= pub.longitude %>'>
+			<p><%= pub.name %></p>
+			<p><%= pub.address %></p>
+		</li>	
+	<% end %>
 
-</div>
+</ul>
 
-<% end %>
-
-<section id=@map@></section>
+<section id="map"></section>

@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Appetite</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
 
+	<header>
+		<nav>
+			<%= link_to "Appetite", root_path %>
+			<%= link_to "Add new", new_pub_path %>
+		</nav>
+	</header>
+
+<article>
 <%= yield %>
+</srticle>
 
 </body>
 </html>
